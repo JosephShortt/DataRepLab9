@@ -1,5 +1,5 @@
 import React from 'react';
-
+//arrow function to return hello world and the current time
 const Content = () => {
   return (
     <div>
