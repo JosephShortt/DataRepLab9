@@ -1,6 +1,6 @@
 import Movies from "./movies";
 //Arrow function that prints read element
-const data  = [[
+const data  = [
     {
       "Title": "Avengers: Infinity War",
       "Year": "2018",
@@ -22,12 +22,14 @@ const data  = [[
       "Type": "movie",
       "Poster": "https://m.media-amazon.com/images/M/MV5BNDQ4YzFmNzktMmM5ZC00MDZjLTk1OTktNDE2ODE4YjM2MjJjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
     }
-  ]];
+  ];
 const Read = () => {
-    return <div>
+    return (
+        <div>
         <h3>Hello from the read component</h3>;
         <Movies myMovies={data}/>
         </div>
+    );
   };
   
   export default Read;
