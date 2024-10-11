@@ -1,5 +1,6 @@
 import Movies from "./movies";
 //Arrow function that prints read element
+//data array structure for json data
 const data  = [
     {
       "Title": "Avengers: Infinity War",
@@ -23,6 +24,7 @@ const data  = [
       "Poster": "https://m.media-amazon.com/images/M/MV5BNDQ4YzFmNzktMmM5ZC00MDZjLTk1OTktNDE2ODE4YjM2MjJjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
     }
   ];
+  //Read arrow function that reads in movies data
 const Read = () => {
     return (
         <div>

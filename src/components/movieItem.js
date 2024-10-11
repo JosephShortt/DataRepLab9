@@ -1,18 +1,24 @@
 import { useEffect } from "react";
+import Card from 'react-bootstrap/Card';
 
-const MovieItem = (props)=>{
-    
-
-    return(
-        <div>
-            <h3>{props.myMovie.Title}</h3>
-            <h3>{props.myMovie.Year}</h3>
-            <h3>{props.myMovie.imdbID}</h3>
-            <h3>{props.myMovie.Type}</h3>
-            <img src={props.myMovie.Poster}></img>
-
-        </div>
-    );
+function MovieItem(props) {
+  useEffect(() => {
+    console.log("Movie Item:", props.mymovie);
+  }, [props.mymovie]); // Only run this effect when the mymovie prop changes
+  //Creates a bootsrap card that displays the movie poster, year
+  return (
+    <div>
+      <Card>
+        <Card.Header>{props.myMovie.Title}</Card.Header>
+        <Card.Body>
+          <blockquote className="blockquote mb-0">
+            <img src={props.myMovie.Poster} alt={props.myMovie.Title} />
+            <footer>{props.myMovie.Year}</footer>
+          </blockquote>
+        </Card.Body>
+      </Card>
+    </div>
+  );
 }
 
 export default MovieItem;
