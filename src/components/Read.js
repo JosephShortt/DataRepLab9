@@ -1,6 +1,7 @@
+//Importing movies component
 import Movies from "./movies";
-//Arrow function that prints read element
-//data array structure for json data
+
+// Array of movie data that will be passed as props to the Movies component
 const data  = [
     {
       "Title": "Avengers: Infinity War",
@@ -24,11 +25,12 @@ const data  = [
       "Poster": "https://m.media-amazon.com/images/M/MV5BNDQ4YzFmNzktMmM5ZC00MDZjLTk1OTktNDE2ODE4YjM2MjJjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
     }
   ];
-  //Read arrow function that reads in movies data
+  //Read arrow function that renders movies component
 const Read = () => {
     return (
         <div>
         <h3>Hello from the read component</h3>;
+        {/* Renders the Movies component and passes 'data' as the 'myMovies' prop */}
         <Movies myMovies={data}/>
         </div>
     );
