@@ -1,18 +1,20 @@
 // create.js
-
+//Import useState
 import { useState } from "react";
 
 function Create() {
+  // Define state variables to manage form inputs for movie title, year, and poster URL
   const [title, setTitle] = useState('');
   const [year, setYear] = useState('');
   const [poster, setPoster] = useState('');
 
+  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(title,year,poster);
     
   }
-
+  //Returns each entered input into console for movie title, year and poster
   return (
      <div>
     <h2>This is my Create Component.</h2>
