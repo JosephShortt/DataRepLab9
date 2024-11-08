@@ -10,8 +10,9 @@ function Read() {
 
   // useEffect hook to handle side effects such as data fetching
   useEffect(() => {
+  
     // Make a GET request to the provided API endpoint using axios
-    axios.get('https://jsonblob.com/api/jsonblob/1287718524221775872')
+    axios.get('http://localhost:4000/api/movies')
       .then((response) => {
         // If the request is successful, update the movies state with the data from the response
         setMovies(response.data.movies);
