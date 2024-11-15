@@ -19,6 +19,10 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true })); // Enable URL-encoded data parsing
 app.use(bodyParser.json()); // Enable JSON data parsing
 
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://admin:admin@cluster0.y6xzc.mongodb.net/MyMovieDB');
+
 // Define a GET endpoint to return a list of movies
 app.get('/api/movies', (req, res) => {
     const movies = [ // Array of sample movies to be returned
