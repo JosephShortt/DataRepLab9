@@ -21,20 +21,28 @@ app.use(bodyParser.json()); // Enable JSON data parsing
 
 
 const mongoose = require('mongoose');
+//Connect to mongoose db using specific string
 mongoose.connect('mongodb+srv://admin:admin@cluster0.y6xzc.mongodb.net/MyMovieDB');
 
+//Define movie schema for the documents
 const movieSchema = new mongoose.Schema({
   title: String,
   year: String,
   poster: String
 });
-
+//Create a movied model for myMovies
 const MovieModel = new mongoose.model('myMovies', movieSchema);
 
 // Define a GET endpoint to return a list of movies
 app.get('/api/movies', async (req, res) => {
   const movies = await MovieModel.find({});
   res.json({ movies }); 
+});
+
+//Request spcific movie details using asynchronous 
+app.get('/api/movies/:id', async (req, res) => {
+  const movie = await MovieModel.findById(req.params.id);
+  res.json(movie);
 });
 
 // Define a POST endpoint to receive and log a new movie
