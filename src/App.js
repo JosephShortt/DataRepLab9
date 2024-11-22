@@ -8,6 +8,7 @@ import Read from './components/Read';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Edit from './components/edit';
 
 //Prints content, footr and header. footer in  localhost:read and header in create
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/home" element={<Content />} />
         <Route path="/read" element={<Read/>} />
         <Route path="/create" element={<Create/>} />
+        <Route path='/edit/:id' element={<Edit />} />
       </Routes>
     </Router>
   );
