@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card'; //Importing card component from bootstr
 import { Link } from 'react-router-dom';
 function MovieItem(props) {
   useEffect(() => {
-    console.log("Movie Item:", props.mymovie);
+    console.log("Movie Item:", props.myMovie);
   }, [props.mymovie]); // Only run this effect when the mymovie prop changes
   //Creates a bootsrap card that displays the movie poster, year
   return (
