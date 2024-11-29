@@ -4,7 +4,7 @@ const Movies = (props)=>{
     // The map function iterates over each movie in 'myMovies' and returns a MovieItem component for each movie
     return props.myMovies.map(
         (movie)=>{
-            return <MovieItem myMovie={movie} key={movie.id}/>
+            return <MovieItem myMovie={movie} key={movie.id} Reload={props.ReloadData}/>
         }
     );
 }
