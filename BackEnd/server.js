@@ -50,9 +50,12 @@ app.put('/api/movie/:id', async (req, res) => {
   res.send(movie);
 });
 
+// Defining a DELETE route to handle requests for deleting a movie by its ID
 app.delete('/api/movie/:id', async (req, res) => {
   
   console.log('Deleting movie with ID:', req.params.id);
+  // Using the MovieModel to find and delete the movie with the given ID
+  // The ID is extracted from the request parameters (req.params.id)
   const movie = await MovieModel.findByIdAndDelete(req.params.id);
   res.status(200).send({ message: "Movie deleted successfully", movie });
   

@@ -11,6 +11,7 @@ function MovieItem(props) {
 
   const handleDelete = (e) => {
     e.preventDefault();
+    //Deletes the movie with the given ID using axios.deleted
     axios.delete('http://localhost:4000/api/movie/' + props.myMovie._id)
       .then(() => {
         props.Reload(); // Refresh the movie list after deletion
@@ -33,6 +34,7 @@ function MovieItem(props) {
           </blockquote>
         </Card.Body>
         <Link to={"/edit/" + props.myMovie._id} className="btn btn-primary">Edit</Link>
+        {/*Delete Button that calls handleDelete*/} 
         <Button variant="danger" onClick={handleDelete}>Delete</Button>
       </Card>
     </div>
